@@ -1,0 +1,19 @@
+{
+  "name": "random-css-color",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michrome/random-css-color.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michrome/random-css-color/issues"
+  },
+  "homepage": "https://github.com/michrome/random-css-color#readme"
+}
