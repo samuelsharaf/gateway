@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/michrome/random-css-color/issues"
   },
-  "homepage": "https://github.com/michrome/random-css-color#readme"
+  "homepage": "https://github.com/michrome/random-css-color#readme",
+  "dependencies": {
+    "node-fetch": "1.5.3"
+  }
 }
