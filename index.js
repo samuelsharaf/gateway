@@ -1,14 +1,14 @@
 var http = require('http')
 var server = http.createServer(function (request, response) {
-  var remote_url = process.env.REMOTE_URL
-  http.get(remote_url, function (remote_response) {
-    console.log(`STATUS: ${remote_response.statusCode}`)
-    console.log(`HEADERS: ${JSON.stringify(remote_response.headers)}`)
+  var remoteUrl = `service.${process.env.RANDOM_CSS_COLOR_SERVICE_APP_NAME}.app.localspace`
+  http.get(remoteUrl, function (remoteResponse) {
+    console.log(`STATUS: ${remoteResponse.statusCode}`)
+    console.log(`HEADERS: ${JSON.stringify(remoteResponse.headers)}`)
     var body = ''
-    remote_response.on('data', function (chunk) {
+    remoteResponse.on('data', function (chunk) {
       body += chunk
     })
-    remote_response.on('end', function () {
+    remoteResponse.on('end', function () {
       response.end(body)
     })
   }).on('error', function (e) {
