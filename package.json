@@ -17,6 +17,5 @@
   },
   "homepage": "https://github.com/michrome/random-css-color#readme",
   "dependencies": {
-    "node-fetch": "1.5.3"
   }
 }
