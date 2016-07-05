@@ -1,14 +1,14 @@
 var http = require('http')
 var server = http.createServer(function (request, response) {
-  var url = 'http://jsonplaceholder.typicode.com/posts/1'
-  http.get(url, function (res) {
+  var remote_url = process.env.REMOTE_URL
+  http.get(remote_url, function (remote_response) {
+    console.log(`STATUS: ${remote_response.statusCode}`)
+    console.log(`HEADERS: ${JSON.stringify(remote_response.headers)}`)
     var body = ''
-    res.on('data', function (chunk) {
+    remote_response.on('data', function (chunk) {
       body += chunk
     })
-    res.on('end', function () {
-      var fbResponse = JSON.parse(body)
-      console.log('Got a response: ', fbResponse.body)
+    remote_response.on('end', function () {
       response.end(body)
     })
   }).on('error', function (e) {
