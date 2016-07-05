@@ -1,6 +1,7 @@
 var http = require('http')
 var server = http.createServer(function (request, response) {
-  var remoteUrl = `service.${process.env.SERVICE_APP_NAME}.app.localspace`
+  var remoteUrl = 'http://service.' + process.env.SERVICE_APP_NAME + '.app.localspace'
+  console.log(`About to get ${remoteUrl}`)
   http.get(remoteUrl, function (remoteResponse) {
     console.log(`STATUS: ${remoteResponse.statusCode}`)
     console.log(`HEADERS: ${JSON.stringify(remoteResponse.headers)}`)
