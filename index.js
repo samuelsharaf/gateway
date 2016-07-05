@@ -1,6 +1,6 @@
 var http = require('http')
 var server = http.createServer(function (request, response) {
-  var remoteUrl = 'http://service.' + process.env.SERVICE_APP_NAME + '.app.localspace'
+  var remoteUrl = 'http://service.' + process.env.SERVICE_APP_NAME + '.app.localspace:3000'
   console.log(`About to get ${remoteUrl}`)
   http.get(remoteUrl, function (remoteResponse) {
     console.log(`STATUS: ${remoteResponse.statusCode}`)
