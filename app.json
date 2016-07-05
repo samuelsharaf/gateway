@@ -1,8 +1,8 @@
 {
   "repository": "https://github.com/michrome/gateway",
   "env": {
-    "RANDOM_CSS_COLOR_SERVICE_APP_NAME": {
-      "description": "The Heroku app name of the random color service",
+    "SERVICE_APP_NAME": {
+      "description": "The Heroku app name of the service app",
       "required": true
     }
   },
